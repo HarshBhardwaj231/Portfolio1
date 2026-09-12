@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #071b3a;
+        color: white;
+        padding: 15px calc((100% - 1250px) / 2);
+      }
+
+      nav {
+        display: flex;
+        gap: 30px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 100;
+        transition: color 1s;
+      }
+
+      nav a:hover {
+        color: #38bdf8;
+      }
+
+      h2 {
+        font-size: 28px;
+        margin: 0;
+      }
+
+      p {
+        font-size: 16px;
+        color: #e7e2f9;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      #projects img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 15px;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      form label {
+        margin-bottom: 5px;
+      }
+
+      form button {
+        width: 160px;
+        padding: 10px;
+        background-color: #1c0794;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        grid-column: 1 / 2;
+        margin-top: 5px;
+      }
+
+      form button:hover {
+        background-color: #2563eb;
+      }
+
+      form textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      form input:focus,
+      form textarea:focus {
+        outline: none;
+        border-color: #3028a0;
+      }
+
+      form > div {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #071b3a;
+        color: white;
+      }
+
+      footer p {
+        color: white;
+      }
+
+      #about {
+        padding: 40px 100px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      #about figure {
+        margin: 0;
+      }
+
+      #about h4 {
+        margin-top: 0;
+        font-size: 24px;
+      }
+
+      .about-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .about-content > div {
+        flex: 1;
+      }
+
+      .about-content p {
+        line-height: 1.6;
+      }
+
+      .skills-projects {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+        padding: 30px 25px;
+        align-items: start;
+      }
+
+      #projects article {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-radius: 8px;
+        transition:
+          border-color 0.3s,
+          transform 0.3s;
+      }
+
+      #projects article:hover {
+        border-color: #2008a8;
+        transform: translateY(-3px);
+      }
+
+      #projects article div {
+        flex: 1;
+      }
+
+      #projects h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      #projects article p {
+        color: #1d1f21;
+        font-size: 16px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+
+      #projects article img {
+        flex-shrink: 0;
+        border-radius: 8px;
+      }
+
+      #projects article a {
+        display: inline-block;
+        margin-top: 5px;
+        text-decoration: none;
+      }
+
+      #projects article a:hover {
+        color: #38bdf8;
+      }
+
+      #about p {
+        color: black;
+      }
+
+      #skills {
+        align-self: start;
+      }
+
+      .skills-box {
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 8px;
+        transition:
+          border-color 0.3s,
+          transform 0.3s;
+      }
+
+      .skills-box:hover {
+        border-color: #2008a8;
+        transform: translateY(-3px);
+      }
+
+      .skills-box ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      .skills-box li {
+        margin-bottom: 12px;
+      }
+
+      #contact {
+        padding: 40px;
+      }
+
+      main {
+        max-width: 1250px;
+        margin: auto;
+      }
+
+      .technologies {
+        color: #1d1f21;
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h2>Harsh Bhardwaj</h2>
+        <p>Full Stack Developer</p>
+      </div>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <div class="about-content">
+          <figure>
+            <img src="images/profile.jpg" alt="Profile Photo" />
+          </figure>
+
+          <div>
+            <h4>ABOUT ME</h4>
+
+            <p>
+              Hi! I'm Harsh Bhardwaj, a Computer Science Student<br />
+              passionate about building web application and<br />
+              exploring AI technologies.<br />
+              I love turning ideas into real-world projects.<br />
+            </p>
+            <a href="#" download>Download CV</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="skills-projects">
+        <section id="skills">
+          <h2>SKILLS</h2>
+          <div class="skills-box">
+            <ul>
+              <li>C++</li>
+
+              <li>Python</li>
+
+              <li>JavaScript</li>
+
+              <li>HTML</li>
+
+              <li>CSS</li>
+
+              <li>SQL</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>PROJECTS</h2>
+
+          <article>
+            <img src="images/pc.jpg" alt="PC" />
+
+            <div>
+              <h3>AI News Aggregator</h3>
+              <p>
+                A website that fetches and displays the latest AI <br />
+                news from various sources.<br />
+              </p>
+
+              <p class="technologies">
+                <strong>Technologies:</strong>HTML,CSS,JavaScript
+              </p>
+              <a href="#">View Project</a>
+            </div>
+          </article>
+
+          <article>
+            <img src="images/file.jpg" alt="File" />
+
+            <div>
+              <h3>Invoice Automation</h3>
+              <p>
+                Automated invoice generation and email<br />
+                notification system.<br />
+              </p>
+              <p class="technologies">
+                <strong>Technologies:</strong>Python,SQL
+              </p>
+              <a href="#">View Project</a>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <section id="contact">
+        <h3>CONTACT ME</h3>
+
+        <form>
+          <div>
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              placeholder="write your message here..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Harsh Bhardwaj. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
